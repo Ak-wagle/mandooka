@@ -11,16 +11,23 @@ import xacro
 
 def generate_launch_description():
 
-    # use it if only needed use_sim_time
+    # Use sim time launch argument - if needed
     use_sim_time = LaunchConfiguration('use_sim_time')
 
-    # Processing the URDF file
-    pkg_path = os.path.join(get_package_share_directory('my_bot'))
-    xacro_file = os.path.join(pkg_path,'description','robot.urdf.xacro')
+    # Get path to the package and xacro file
+    pkg_path = get_package_share_directory('mandooka')
+    xacro_file = os.path.join(pkg_path, 'description', 'robot.urdf.xacro')
+
+    # Process the xacro file
     robot_description_config = xacro.process_file(xacro_file)
-    
-    # robot_state_publisher node
-    params = {'robot_description': robot_description_config.toxml(), 'use_sim_time': use_sim_time}
+    robot_description = robot_description_config.toxml()
+
+    # Define robot_state_publisher node
+    params = {
+        'robot_description': robot_description,
+        'use_sim_time': use_sim_time
+    }
+
     node_robot_state_publisher = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
@@ -28,11 +35,12 @@ def generate_launch_description():
         parameters=[params]
     )
 
-    # Launch
+    # Return LaunchDescription object
     return LaunchDescription([
         DeclareLaunchArgument(
             'use_sim_time',
             default_value='false',
-            description='Use sim time if true'),
+            description='Use simulation time if true'
+        ),
         node_robot_state_publisher
     ])
