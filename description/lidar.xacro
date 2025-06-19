@@ -4,23 +4,23 @@
     <joint name="laser_joint" type="fixed">
         <parent link="chassis"/>
         <child link="laser_frame"/>
-        <origin xyz="0.1 0 0.175" rpy="0 0 0"/>
+        <origin xyz="0.08 0 0.13" rpy="0 0 0"/>
     </joint>
 
     <link name="laser_frame">
         <visual>
             <geometry>
-                <cylinder radius="0.05" length="0.04"/>
+                <cylinder radius="0.035" length="0.04"/>
             </geometry>
             <material name="black"/>
         </visual>
-        <!-- <visual>
+        <visual>
             <origin xyz="0 0 -0.05"/>
             <geometry>
                 <cylinder radius="0.01" length="0.1"/>
             </geometry>
             <material name="black"/>
-        </visual> -->
+        </visual>
         <collision>
             <geometry>
                 <cylinder radius="0.05" length="0.04"/>
@@ -53,7 +53,7 @@
             </ray>
             <plugin name="laser_controller" filename="libgazebo_ros_ray_sensor.so">
                 <ros>
-                    <argument>--ros-args --remap ~/out:=scan</argument>
+                    <argument>~/out:=scan</argument>
                 </ros>
                 <output_type>sensor_msgs/LaserScan</output_type>
                 <frame_name>laser_frame</frame_name>
