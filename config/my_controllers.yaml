@@ -22,7 +22,7 @@ diff_cont:
     # left_wheel_reversed: true
     # right_wheel_reversed: false
 
-    wheel_separation: 0.1928          
+    wheel_separation: 0.1928
     wheel_radius: 0.0355
 
     use_stamped_vel: false
@@ -30,7 +30,7 @@ diff_cont:
     # open_loop: false    
 
     # wheels_per_side: x
-    # wheel_separation_multiplier: x
+    wheel_separation_multiplier: 0.5
     # left_wheel_radius_multiplier: x
     # right_wheel_radius_multiplier: x
 
