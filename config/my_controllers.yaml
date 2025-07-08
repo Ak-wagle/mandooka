@@ -30,7 +30,7 @@ diff_cont:
     # open_loop: false    
 
     # wheels_per_side: x
-    wheel_separation_multiplier: 0.5
+    # wheel_separation_multiplier: 0.5                       # should be used during the gazebo sim , idk there is some problem
     # left_wheel_radius_multiplier: x
     # right_wheel_radius_multiplier: x
 

@@ -14,14 +14,14 @@ slam_toolbox:
     map_frame: map
     base_frame: base_footprint
     scan_topic: /scan
-    mode: mapping #localization  # mapping (if you want to map, I mean before localizing u've to map)
+    mode: localization  # mapping (if you want to map, I mean before localizing u've to map)
 
     # if you'd like to immediately start continuing a map at a given pose
     # or at the dock, but they are mutually exclusive, if pose is given
     # will use pose
-    # map_file_name: /home/wagle/dev_ws/my_map_serial  # comment this while mapping
+    map_file_name: /home/wagle/mandooka_ws/resources/my_map_serial  # comment this while mapping
     # map_start_pose: [0.0, 0.0, 0.0]
-    # map_start_at_dock: true                          # comment this while mapping
+    map_start_at_dock: true                          # comment this while mapping
 
     debug_logging: false
     throttle_scans: 1
