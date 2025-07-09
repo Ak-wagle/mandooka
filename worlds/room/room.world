@@ -1,0 +1,14 @@
+<!-- /home/wagle/mandooka_ws/src/mandooka/worlds/room/room.world -->
+<sdf version="1.6">
+  <world name="default">
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>file://room/model.sdf</uri>
+    </include>
+  </world>
+</sdf>
