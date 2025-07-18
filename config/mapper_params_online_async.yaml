@@ -19,7 +19,7 @@ slam_toolbox:
     # if you'd like to immediately start continuing a map at a given pose
     # or at the dock, but they are mutually exclusive, if pose is given
     # will use pose
-    map_file_name: /home/wagle/mandooka_ws/tce_map01_serial  # comment this while mapping    # my_map_sim_serial   -> for sim
+    map_file_name: /home/wagle/mandooka_ws/mandookaSerialMap  # comment this while mapping    # my_map_sim_serial   -> for sim
     # map_start_pose: [0.0, 0.0, 0.0]
     map_start_at_dock: true                          # comment this while mapping
 
