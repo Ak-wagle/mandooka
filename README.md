@@ -1,5 +1,7 @@
 # Mandooka – Autonomous Indoor Navigation Robot
 
+![Mandooka Bot](docs/images/mandooka_bot.jpg)
+
 Mandooka is a differential-drive mobile robot built to explore autonomous indoor navigation using ROS 2 Humble. The project was developed with reference to the articubot project by Josh Newans.
 
 The bot includes features such as:
