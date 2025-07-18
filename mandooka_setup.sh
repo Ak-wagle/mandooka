@@ -18,7 +18,7 @@ install_common_packages() {
         ros-humble-xacro \
         ros-humble-twist-mux \
         ros-humble-gazebo-ros \
-        ros-humble-gazebo-ros-pkgs
+        ros-humble-gazebo-ros-pkgs \
 }
 
 install_sbc_packages() {
@@ -26,7 +26,8 @@ install_sbc_packages() {
     sudo apt install -y \
         ros-humble-rplidar-ros \
         ros-humble-ros2-control \
-        ros-humble-ros2-controllers
+        ros-humble-ros2-controllers \
+        python3-vcstool
 }
 
 install_pc_packages() {
